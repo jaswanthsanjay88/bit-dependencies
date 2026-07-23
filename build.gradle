@@ -1,0 +1,36 @@
+plugins {
+    id 'maven-publish'
+}
+
+group = 'com.github.jaswanthsanjay88'
+version = '1.0.0'
+
+publishing {
+    publications {
+        ai_sd(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'ai_sd'
+            artifact('libs/ai_sd-release.aar')
+        }
+        ai_sherpa_v3(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'ai_sherpa_v3'
+            artifact('libs/ai_sherpa-release-v3.aar')
+        }
+        ai_sherpa(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'ai_sherpa'
+            artifact('libs/ai_sherpa-release.aar')
+        }
+        gguf_lib(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'gguf_lib'
+            artifact('libs/gguf_lib-release.aar')
+        }
+        openssl_libs(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'openssl_libs'
+            artifact('libs/openssl-libs.zip')
+        }
+    }
+}
