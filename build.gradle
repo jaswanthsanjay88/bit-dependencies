@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.jaswanthsanjay88'
-version = '1.0.1'
+version = '1.1.0'
 
 publishing {
     publications {
@@ -32,6 +32,11 @@ publishing {
             groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
             artifactId = 'openssl_libs'
             artifact('libs/openssl-libs.zip')
+        }
+        pdfium_libs(MavenPublication) {
+            groupId = 'com.github.jaswanthsanjay88.bit-dependencies'
+            artifactId = 'pdfium_libs'
+            artifact('libs/pdfium-libs.zip')
         }
     }
 }
